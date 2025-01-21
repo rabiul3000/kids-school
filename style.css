@@ -210,6 +210,8 @@ nav > a {
 	opacity: 0.2;
 }
 
+
+
 /* for mobile responsiveness */
 @media screen and (max-width: 425px) {
 	/* navbar  */
@@ -260,28 +262,33 @@ nav > a {
 
 	/* curriculam */
 
-    .curriculam {
-        display: block;
-    }
+	.curriculam {
+		display: block;
+	}
 
-    .curriculam__title{
-        margin-bottom: 0px;
+	.curriculam__title {
+		margin-bottom: 0px;
+	}
 
-    }
+	.curriculam__cards {
+		display: block;
+		padding: 0.6rem;
+	}
 
-    .curriculam__cards{
-        display: block;
-        padding: 0.6rem;
-    }
-    .curriculam__card{
-        margin-block: 0.5rem;
-        border: 1px solid whitesmoke;
-    }
+	.curriculam__card {
+		margin-block: 0.5rem;
+		border: 1px solid whitesmoke;
+	}
 
+	.curriculam__nextPagebtn {
+		display: none;
+	}
 
 
 
 }
+
+
 
 /* for tablet responsiveness */
 
