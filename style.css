@@ -29,6 +29,9 @@ main {
 .purple {
 	color: #5d58ef;
 }
+.purple2 {
+	color: #8700ff;
+}
 
 .bg-orange {
 	background-color: #fea301;
@@ -36,6 +39,17 @@ main {
 
 .bg-black {
 	background-color: black;
+}
+.bg-blue-gradiant {
+	background: linear-gradient(#d4ebec, white);
+}
+
+.bg-orange-gradiant {
+	background: linear-gradient(#eee4d0, white);
+}
+
+.bg-purple-gradiant {
+	background: linear-gradient(#dcdbf3, white);
 }
 
 .d-none {
@@ -131,8 +145,70 @@ nav > a {
 
 /* curriculam */
 
+.curriculam {
+	margin-block: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+	background: url('./assets/bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
+.curriculam__title {
+	text-align: center;
+	font-size: 2rem;
+	margin-block: 2rem;
+}
 
+.curriculam__cards {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+}
+.curriculam__card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 3rem 1rem;
+	border-radius: 10px;
+}
+
+.curriculam__card__description {
+	font-size: small;
+	text-align: center;
+	color: grey;
+	padding: 1rem;
+}
+
+.curriculam__card__btn > button {
+	border: none;
+	background: none;
+	font-weight: bold;
+	font-size: small;
+}
+
+.curriculam__nextPagebtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+.curriculam__nextPagebtn > button {
+	padding: 0.8rem;
+	border-radius: 50%;
+	border: none;
+	background: #fea301;
+	color: white;
+}
+
+.curriculam__nextPagebtn > button:active {
+	opacity: 0.2;
+}
 
 /* for mobile responsiveness */
 @media screen and (max-width: 425px) {
@@ -182,8 +258,28 @@ nav > a {
 		justify-content: center;
 	}
 
+	/* curriculam */
 
-    /* curriculam */
+    .curriculam {
+        display: block;
+    }
+
+    .curriculam__title{
+        margin-bottom: 0px;
+
+    }
+
+    .curriculam__cards{
+        display: block;
+        padding: 0.6rem;
+    }
+    .curriculam__card{
+        margin-block: 0.5rem;
+        border: 1px solid whitesmoke;
+    }
+
+
+
 
 }
 
