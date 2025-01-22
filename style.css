@@ -413,6 +413,12 @@ nav > a {
 	width: 30px;
 }
 
+.marque{
+	color: #01acfd;
+	margin-inline: 2rem;
+}
+
+
 /* for mobile responsiveness */
 @media screen and (max-width: 425px) {
 	section {
