@@ -559,4 +559,10 @@ nav > a {
 	.footer__left {
 		width: 100%;
 	}
+	.marque{
+		font-size: small;
+		margin-inline: 1rem;
+		color: #5d58f0;
+	}
+
 }
