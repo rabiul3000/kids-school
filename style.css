@@ -6,10 +6,6 @@
 }
 
 main {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-
 	font-family: 'Quicksand', serif;
 	font-optical-sizing: auto;
 }
@@ -40,6 +36,15 @@ main {
 .bg-black {
 	background-color: black;
 }
+
+.bg-olive {
+	background-color: #95b226;
+}
+
+.bg-secondary-blue {
+	background-color: #5d58f0;
+}
+
 .bg-blue-gradiant {
 	background: linear-gradient(#d4ebec, white);
 }
@@ -67,6 +72,13 @@ main {
 
 .btn:active {
 	border: 2px solid white;
+}
+
+header {
+	padding-inline: 2rem;
+}
+section {
+	padding-inline: 2rem;
 }
 
 /* navbar */
@@ -113,7 +125,6 @@ nav > a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 75vh;
 }
 .hero__left {
 	display: flex;
@@ -129,6 +140,7 @@ nav > a {
 
 .hero__left > p {
 	width: 75%;
+	font-weight: 500;
 }
 
 .hero-image-container {
@@ -210,11 +222,138 @@ nav > a {
 	opacity: 0.2;
 }
 
+/* stories section */
 
+.stories {
+	background: url('./assets/bg.png'), linear-gradient(white, #f8deb2);
+	margin-top: 4rem;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	background-position: top;
+}
+
+.stories__title {
+	text-align: center;
+}
+.stories__container {
+	padding-block: 3rem;
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.stories__left {
+	display: flex;
+}
+
+.lg__card {
+	background-color: white;
+	width: 100%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 1rem;
+}
+
+.lg__card__title {
+	padding-inline: 2rem;
+	width: 80%;
+}
+.lg__card__description {
+	padding: 1rem 2rem;
+	font-size: small;
+	color: rgb(73, 72, 72);
+	width: 80%;
+	font-weight: 600;
+}
+
+.lg__card__img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	overflow: hidden;
+}
+
+.lg__card__img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.lg__card__btn {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.lg__card__btn > button {
+	position: absolute;
+	background: #3cd8e8;
+	border: none;
+	color: white;
+	padding: 0.8rem 1rem;
+	border-radius: 30px;
+	left: 2rem;
+	top: -22px;
+}
+
+.stories__right {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.normal__card {
+	border-radius: 10px;
+	background-color: white;
+	padding-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+.normal__card__img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	overflow: hidden;
+}
+
+.normal__card__img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.normal__card__btn {
+	position: relative;
+	margin-bottom: 2rem;
+}
+.normal__card__btn > button {
+	position: absolute;
+	border: none;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 30px;
+	left: 2rem;
+	top: -20px;
+}
+
+.normal__card__description {
+	padding-inline: 2rem;
+	font-size: small;
+	font-weight: bold;
+}
+
+.stories__btn {
+	display: flex;
+	justify-content: center;
+}
 
 /* for mobile responsiveness */
 @media screen and (max-width: 425px) {
-	/* navbar  */
+	section {
+		padding-inline: 0.2rem;
+	}
+
+	/* navbar style  */
 	nav {
 		display: none;
 	}
@@ -235,7 +374,7 @@ nav > a {
 		color: #fea301;
 	}
 
-	/* hero */
+	/* hero section */
 
 	.hero {
 		flex-direction: column-reverse;
@@ -260,7 +399,7 @@ nav > a {
 		justify-content: center;
 	}
 
-	/* curriculam */
+	/* curriculam section */
 
 	.curriculam {
 		display: block;
@@ -271,8 +410,10 @@ nav > a {
 	}
 
 	.curriculam__cards {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		padding: 0.6rem;
+		gap: 0.2rem;
 	}
 
 	.curriculam__card {
@@ -284,12 +425,48 @@ nav > a {
 		display: none;
 	}
 
+	/* stories section  */
 
+	.stories {
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+	}
 
+	.stories__left {
+		display: none;
+	}
+
+	.stories__right {
+		padding-inline: 0.5rem;
+	}
+
+	.normal__card__btn > button {
+		position: absolute;
+		border: none;
+		color: white;
+		padding: 0.4rem 0.8rem;
+		border-radius: 30px;
+		left: 0.8rem;
+		top: -14px;
+		font-size: xx-small;
+	}
+
+	.normal__card__description {
+		padding: 0px 1rem;
+		font-size: x-small;
+	}
+
+	.stories__container {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.stories__btn > button {
+		margin-block: 1rem;
+		border-radius: 15px;
+	}
 }
-
-
-
 /* for tablet responsiveness */
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
